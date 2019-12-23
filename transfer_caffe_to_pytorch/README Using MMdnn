@@ -1,0 +1,14 @@
+Tool used: https://github.com/Microsoft/MMdnn
+
+
+
+Convert from caffe to pytorch
+mmconvert -sf caffe -in ./deploy.prototxt -iw ./gaze_classifier_iter_30000.caffemodel --dstNodeName MMdnn_Output -df pytorch -om caffe_squeezenet_to_pytorch.pth
+
+
+vidualize models:
+
+mmtoir -f caffe -w ./gaze_classifier_iter_30000.caffemodel -n ./deploy.prototxt -o caffe_squeezanet
+
+http://mmdnn.eastasia.cloudapp.azure.com:8080/
+drag the json file to the website.
