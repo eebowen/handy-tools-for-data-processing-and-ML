@@ -1,19 +1,21 @@
 import os
 from random import randint
 import shutil
-root_dir = ["/mnt/hdd/bowen/glasses_removal/PyTorch-CycleGAN/datasets/lisat_gaze/train/A/",
+source_dir = ["/mnt/hdd/bowen/glasses_removal/PyTorch-CycleGAN/datasets/lisat_gaze/train/A/",
 			"/mnt/hdd/bowen/glasses_removal/PyTorch-CycleGAN/datasets/lisat_gaze/train/B/"]
 target_dir = ["/mnt/hdd/bowen/glasses_removal/PyTorch-CycleGAN/datasets/lisat_gaze/test/A/",
 				"/mnt/hdd/bowen/glasses_removal/PyTorch-CycleGAN/datasets/lisat_gaze/test/B/"]
-# root_dir = ["/mnt/hdd/bowen/glasses_removal/PyTorch-CycleGAN/datasets/lisat_gaze/train/B/"]
+# source_dir = ["/mnt/hdd/bowen/glasses_removal/PyTorch-CycleGAN/datasets/lisat_gaze/train/B/"]
 # target_dir = ["/mnt/hdd/bowen/glasses_removal/PyTorch-CycleGAN/datasets/lisat_gaze/test/B/"]
-
-
+source_dir = ["/home/cvrr/workspace/cycleGAN/dataset/lisat_gaze_v4_sampled/train/A/",
+            "/home/cvrr/workspace/cycleGAN/dataset/lisat_gaze_v4_sampled/train/B/"]
+target_dir = ["/home/cvrr/workspace/cycleGAN/dataset/lisat_gaze_v4_sampled/test/A/",
+                "/home/cvrr/workspace/cycleGAN/dataset/lisat_gaze_v4_sampled/test/B/"]
 
 moving_percent = 10
 # moving_number = 100
-for i in range(len(root_dir)):
-	one_dir = root_dir[i]
+for i in range(len(source_dir)):
+	one_dir = source_dir[i]
 	one_target = target_dir[i]
 	
 	try:
