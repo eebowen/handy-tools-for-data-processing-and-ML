@@ -12,12 +12,23 @@ source_dir = ["/home/cvrr/workspace/cycleGAN/dataset/lisat_gaze_v4/no_glasses_me
 target_dir = ["/home/cvrr/workspace/cycleGAN/dataset/lisat_gaze_v4/no_glasses_sampled/",
                 "/home/cvrr/workspace/cycleGAN/dataset/lisat_gaze_v4/with_glasses_sampled/"]
 
+source_dir = [# "/mnt/cvrr-nas/WorkArea3/WorkArea3_NoBackup/Userarea/bowen/lisat_img_data_v5/for_training/no_glasses_day/",
+                "/mnt/cvrr-nas/WorkArea3/WorkArea3_NoBackup/Userarea/bowen/lisat_img_data_v5/for_training/no_glasses_night/",
+                "/mnt/cvrr-nas/WorkArea3/WorkArea3_NoBackup/Userarea/bowen/lisat_img_data_v5/for_training/with_glasses_day/",
+                "/mnt/cvrr-nas/WorkArea3/WorkArea3_NoBackup/Userarea/bowen/lisat_img_data_v5/for_training/with_glasses_night/"]
+target_dir = [# "/mnt/cvrr-nas/WorkArea3/WorkArea3_NoBackup/Userarea/bowen/lisat_img_data_v5/for_training/no_glasses_day_sampled/",
+                "/mnt/cvrr-nas/WorkArea3/WorkArea3_NoBackup/Userarea/bowen/lisat_img_data_v5/for_training/no_glasses_night_sampled/",
+                "/mnt/cvrr-nas/WorkArea3/WorkArea3_NoBackup/Userarea/bowen/lisat_img_data_v5/for_training/with_glasses_day_sampled/",
+                "/mnt/cvrr-nas/WorkArea3/WorkArea3_NoBackup/Userarea/bowen/lisat_img_data_v5/for_training/with_glasses_night_sampled/"]
+
+
+
 sampling_rate = 5 # choosing 1 image in 10
 # moving_number = 100
 for i in range(len(source_dir)):
     one_source = source_dir[i]
     one_target = target_dir[i]
-
+    print("from", one_source, "\nto", one_target)
     try:
         os.mkdir(one_target)
     except:
